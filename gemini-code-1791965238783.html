@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 1 - Test 2 (Family Life - 40 Câu Chuẩn Format Mới) - Ms Lê Hằng English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-purple: #7952B3;
+      --primary-coral: #FF5E62;
+      --primary-yellow: #FFD166;
+      --primary-cyan: #06D6A0;
+      --accent-blue: #0984E3;
+      --correct-green: #00BA66;
+      --correct-bg: #E8F8F0;
+      --wrong-red: #FA5252;
+      --wrong-bg: #FFEAEA;
+      --card-bg: #FFFFFF;
+      --text-main: #2D3436;
+      --text-muted: #636E72;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Nunito', 'Quicksand', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(180deg, #FFEFBA 0%, #FFDFBA 8%, #E3F2FD 35%, #CBE3F7 70%, #A0C4E2 100%);
+      background-attachment: fixed;
+      position: relative;
+      overflow-x: hidden;
+      color: var(--text-main);
+      padding-bottom: 120px;
+    }
+
+    .city-skyline {
+      position: fixed;
+      bottom: 45px;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.32;
+      background-repeat: repeat-x;
+      background-position: bottom;
+      background-size: 400px 120px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 120' width='400' height='120'%3E%3Cpath fill='%236C8EB5' d='M0,120 L0,60 L20,60 L20,30 L50,30 L50,120 L70,120 L70,45 L100,45 L100,120 L130,120 L130,15 L160,15 L160,120 L190,120 L190,50 L220,50 L220,120 L250,120 L250,25 L280,25 L280,120 L310,120 L310,40 L340,40 L340,120 L370,120 L370,55 L400,55 L400,120 Z'/%3E%3C/svg%3E");
+    }
+
+    .bottom-road {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 46px;
+      background: #4A4A4A;
+      border-top: 6px solid #00BA66;
+      z-index: 1;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+    }
+    .road-curb {
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: repeating-linear-gradient(90deg, #FF4757 0px, #FF4757 24px, #FFFFFF 24px, #FFFFFF 48px);
+    }
+    .road-lines {
+      width: 100%;
+      height: 6px;
+      background: repeating-linear-gradient(90deg, #FFFFFF 0px, #FFFFFF 35px, transparent 35px, transparent 70px);
+      opacity: 0.85;
+    }
+
+    .bg-elements {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .floating-cloud {
+      position: absolute;
+      opacity: 0.45;
+      animation: floatCloud 25s linear infinite;
+    }
+    @keyframes floatCloud {
+      0% { transform: translateX(-150px); }
+      100% { transform: translateX(110vw); }
+    }
+
+    .app-container {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 16px 14px;
+    }
+
+    .top-announcement {
+      background: #FFFFFF;
+      border-radius: 30px;
+      padding: 8px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      margin-bottom: 12px;
+      border: 1.5px solid #FFDEE9;
+    }
+    .announcement-text {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .teacher-badge {
+      background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+      color: #FFF;
+      padding: 3px 12px;
+      border-radius: 18px;
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.3px;
+    }
+
+    .unit-hero-card {
+      background: #FFFFFF;
+      border-radius: 28px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(116, 185, 255, 0.18);
+      border: 2px solid #E3F2FD;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .unit-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(90deg, #7952B3, #0984E3);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .unit-title {
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: #2D3436;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+    .unit-subtitle {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #636E72;
+    }
+    .unit-icon-box {
+      width: 90px;
+      height: 90px;
+      flex-shrink: 0;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #FFF0F5, #E0F7FA);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      border: 2px solid #FFFFFF;
+    }
+
+    .top-stats-bar {
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      padding: 10px 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border: 2px solid #FFF0F5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+    .pill-counter-left {
+      background: #FF5E62;
+      color: #FFF;
+      font-weight: 900;
+      font-size: 0.95rem;
+      padding: 5px 14px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 3px 0 #D63031;
+    }
+    .bar-track {
+      flex: 1;
+      height: 16px;
+      background: #EBF3FA;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      border: 2px solid #E1EDF8;
+    }
+    .bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #FDCB6E, #00D26A);
+      border-radius: 10px;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .pill-counter-right {
+      background: #00D26A;
+      color: #FFF;
+      font-weight: 900;
+      font-size: 0.95rem;
+      padding: 5px 14px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 3px 0 #00A853;
+    }
+
+    .warning-box {
+      background: #FFF9E6;
+      border: 3px dashed #FDCB6E;
+      border-left: 8px solid #F39C12;
+      border-radius: 20px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 18px rgba(243, 156, 18, 0.12);
+    }
+    .warning-title {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: #D35400;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+    .warning-text {
+      font-size: 0.95rem;
+      color: #4A3E1F;
+      line-height: 1.55;
+      font-weight: 700;
+    }
+    .warning-subtext {
+      margin-top: 6px;
+      font-size: 0.88rem;
+      color: #C0392B;
+      font-weight: 800;
+    }
+
+    .reading-passage-card {
+      background: #FFFDF8;
+      border: 3px solid #FDCB6E;
+      border-radius: 26px;
+      padding: 24px 26px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 28px rgba(253, 203, 110, 0.25);
+      position: relative;
+    }
+    .passage-header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 2px dashed #F1C40F;
+    }
+    .passage-title-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.22rem;
+      font-weight: 900;
+      color: #D35400;
+    }
+    .passage-scope-badge {
+      background: #F39C12;
+      color: #FFF;
+      font-size: 0.82rem;
+      font-weight: 900;
+      padding: 4px 14px;
+      border-radius: 14px;
+      box-shadow: 0 2px 0 #D35400;
+    }
+    .passage-intro-text {
+      font-size: 0.96rem;
+      font-weight: 800;
+      color: #4B4B4B;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+    .passage-blank {
+      display: inline-block;
+      min-width: 68px;
+      padding: 1px 8px;
+      margin: 0 4px;
+      background: #FFF3CD;
+      border: 1.5px dashed #F39C12;
+      border-radius: 8px;
+      font-weight: 900;
+      color: #D35400;
+      text-align: center;
+    }
+    .passage-prompt-banner {
+      margin-top: 16px;
+      background: linear-gradient(90deg, #0984E3, #00CEC9);
+      color: #FFF;
+      padding: 10px 16px;
+      border-radius: 14px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-toggle-passage {
+      background: #EDF2F7;
+      color: #2B6CB0;
+      border: 1.5px solid #CBD5E0;
+      border-radius: 12px;
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+      transition: all 0.2s ease;
+    }
+    .btn-toggle-passage:hover {
+      background: #E2E8F0;
+      border-color: #0984E3;
+      color: #0984E3;
+    }
+    .collapse-passage-box {
+      display: none;
+      background: #FFFDF9;
+      border: 2px dashed #CBD5E0;
+      border-radius: 16px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      font-size: 0.96rem;
+      line-height: 1.7;
+    }
+
+    .quiz-card {
+      background: #FFFFFF;
+      border-radius: 26px;
+      padding: 24px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 3px solid #F0F4F8;
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .quiz-card:hover {
+      box-shadow: 0 14px 38px rgba(116, 185, 255, 0.2);
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .q-number-pill {
+      background: #0984E3;
+      color: #FFFFFF;
+      font-weight: 900;
+      font-size: 0.9rem;
+      padding: 5px 14px;
+      border-radius: 20px;
+      box-shadow: 0 3px 0 #0767B1;
+    }
+    .q-tag-pill {
+      background: #FFF3E0;
+      color: #E65100;
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 4px 12px;
+      border-radius: 16px;
+      border: 1px solid #FFE0B2;
+    }
+    .q-text {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #2D3436;
+      line-height: 1.55;
+      margin-bottom: 18px;
+    }
+    .q-text u, .opt-text u {
+      color: #FF3838;
+      font-weight: 900;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 4px;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    @media (min-width: 600px) {
+      .options-grid.grid-2col {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .option-btn {
+      position: relative;
+      background: #FFFFFF;
+      border: 2.5px solid #E2E8F0;
+      border-radius: 18px;
+      padding: 14px 18px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #2D3436;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 5px 0 #CBD5E1;
+      transition: all 0.15s ease-in-out;
+      text-align: left;
+    }
+    .option-btn:hover:not(:disabled) {
+      transform: translateY(-2px) scale(1.015);
+      border-color: #0984E3;
+      box-shadow: 0 7px 0 #0767B1;
+      background: #F8FBFE;
+    }
+    .option-btn:active:not(:disabled) {
+      transform: translateY(4px);
+      box-shadow: 0 1px 0 #CBD5E1;
+    }
+    .opt-key {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: #F1F2F6;
+      color: #57606F;
+      font-weight: 900;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .option-btn.selected-correct {
+      background: #E8F8F0 !important;
+      border-color: var(--correct-green) !important;
+      color: #0E6251 !important;
+      box-shadow: 0 5px 0 #00A853 !important;
+    }
+    .option-btn.selected-correct .opt-key {
+      background: var(--correct-green) !important;
+      color: #FFFFFF !important;
+    }
+
+    .option-btn.selected-wrong {
+      background: #FFEAEA !important;
+      border-color: var(--wrong-red) !important;
+      color: #922B21 !important;
+      box-shadow: 0 5px 0 #D63031 !important;
+      animation: shakeAnim 0.4s ease-in-out;
+    }
+    .option-btn.selected-wrong .opt-key {
+      background: var(--wrong-red) !important;
+      color: #FFFFFF !important;
+    }
+
+    .option-btn.show-truth {
+      border-color: var(--correct-green) !important;
+      background: #F0FFF4 !important;
+      box-shadow: 0 4px 0 #00A853 !important;
+    }
+    .option-btn.show-truth .opt-key {
+      background: #00BA66 !important;
+      color: #FFF !important;
+    }
+
+    @keyframes shakeAnim {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-8px); }
+      40% { transform: translateX(8px); }
+      60% { transform: translateX(-6px); }
+      80% { transform: translateX(6px); }
+    }
+
+    .explanation-container {
+      display: none;
+      margin-top: 20px;
+      background: #FFFFFF;
+      border: 2px dashed #FFB8B8;
+      border-radius: 22px;
+      padding: 20px;
+      position: relative;
+      animation: slideInDown 0.35s ease;
+      box-shadow: 0 6px 20px rgba(255, 94, 98, 0.08);
+    }
+    @keyframes slideInDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .exp-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #FF5E62;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .exp-trans-box {
+      background: #FFFDF0;
+      border-left: 6px solid #FDCB6E;
+      border-radius: 16px;
+      padding: 12px 18px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #2D3436;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .exp-section-title {
+      font-weight: 900;
+      font-size: 1rem;
+      color: #2D3436;
+      margin-bottom: 10px;
+    }
+
+    .exp-grid-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    @media (min-width: 620px) {
+      .exp-grid-cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .exp-card-item {
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 12px 14px;
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+    .exp-card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+    .card-word { font-weight: 800; font-size: 1rem; }
+    .card-word.word-wrong { color: #0984E3; }
+    .card-word.word-correct { color: #00BA66; }
+
+    .badge-pill {
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 2px 10px;
+      border-radius: 10px;
+    }
+    .badge-pill-wrong { background: #F1F2F6; color: #57606F; }
+    .badge-pill-correct { background: #E8F8F0; color: #00A853; border: 1px solid #A3E9C3; }
+    .card-meaning { color: #B33939; font-weight: 700; font-size: 0.88rem; }
+
+    .exp-block {
+      margin-bottom: 14px;
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+    .rule-tag {
+      background: #FFF3CD;
+      color: #856404;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 10px;
+      margin-right: 6px;
+      display: inline-block;
+    }
+    .highlight-green-tag {
+      background: #D4EDDA;
+      color: #155724;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    .wrong-key-pill {
+      background: #FFEAEA;
+      color: #D63031;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 8px;
+      margin-right: 4px;
+      display: inline-block;
+    }
+
+    .submit-area {
+      text-align: center;
+      margin: 35px 0 60px 0;
+    }
+    .btn-submit-main {
+      background: #00D26A;
+      color: #FFFFFF;
+      font-size: 1.3rem;
+      font-weight: 900;
+      padding: 16px 48px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 0 #00A853, 0 14px 25px rgba(0, 210, 106, 0.4);
+      transition: all 0.15s ease;
+    }
+    .btn-submit-main:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 11px 0 #00A853, 0 18px 30px rgba(0, 210, 106, 0.45);
+    }
+    .btn-submit-main:active {
+      transform: translateY(4px);
+      box-shadow: 0 3px 0 #00A853;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(45, 52, 54, 0.75);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 16px;
+    }
+    .modal-overlay.active { display: flex; }
+    .score-modal {
+      background: #FFFFFF;
+      width: 100%;
+      max-width: 520px;
+      border-radius: 28px;
+      padding: 30px;
+      text-align: center;
+      border: 4px solid #0984E3;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+    .modal-trophy { font-size: 4rem; margin-bottom: 10px; }
+    .score-huge { font-size: 3.2rem; font-weight: 900; color: #0984E3; margin: 10px 0; line-height: 1; }
+    .score-fraction { font-size: 1.2rem; color: #636E72; font-weight: 800; }
+    .feedback-box {
+      background: #F8F9FE;
+      border: 2px dashed #0984E3;
+      border-radius: 18px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      text-align: left;
+    }
+    .feedback-teacher {
+      font-weight: 900;
+      color: #0984E3;
+      margin-bottom: 8px;
+    }
+    .feedback-quote {
+      font-size: 1.02rem;
+      color: #2D3436;
+      line-height: 1.55;
+      font-weight: 700;
+      font-style: italic;
+    }
+    .btn-modal-close {
+      background: #0984E3;
+      color: #FFFFFF;
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 14px 34px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 5px 0 #0767B1;
+      margin: 6px;
+    }
+
+    #confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10000;
+    }
+
+    @media (max-width: 600px) {
+      .app-container { padding: 10px; }
+      .quiz-card { padding: 18px 14px; }
+      .q-text { font-size: 1.05rem; }
+      .option-btn { font-size: 0.95rem; padding: 12px 14px; }
+      .btn-submit-main { font-size: 1.1rem; padding: 14px 32px; }
+      .unit-title { font-size: 1.3rem; }
+      .reading-passage-card { padding: 16px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="bg-elements" id="bgElements"></div>
+  <div class="city-skyline"></div>
+  <div class="bottom-road">
+    <div class="road-curb"></div>
+    <div class="road-lines"></div>
+  </div>
+
+  <div class="app-container">
+
+    <div class="top-announcement">
+      <div class="announcement-text">
+        <span>👩‍🏫 Giáo viên tạo: <strong>Ms Lê Hằng English</strong></span>
+        <span class="teacher-badge">Master of English</span>
+      </div>
+      <div style="font-size: 0.82rem; color: #FF5E62; font-weight: 800;">
+        ⚡ UNIT 1 - TEST 2 (CHUẨN FORMAT ĐỀ THI MỚI - 40 CÂU)
+      </div>
+    </div>
+
+    <div class="unit-hero-card">
+      <div>
+        <div class="unit-badge">
+          <span>🏡 FAMILY LIFE · UNIT 1 - TEST 2 (40 QUESTIONS)</span>
+        </div>
+        <h1 class="unit-title">Đề Thi Unit 1 - Test 2: Family Life & Connections</h1>
+        <div class="unit-subtitle">
+          Thông báo Family Moments · Tờ rơi Harmony Homes · Sắp xếp · Điền mệnh đề · Đọc hiểu 8 câu & 10 câu
+        </div>
+      </div>
+      <div class="unit-icon-box">
+        👨‍👩‍👧‍👦
+      </div>
+    </div>
+
+    <div class="top-stats-bar">
+      <div class="pill-counter-left">
+        <span>⭐</span>
+        <span id="correctScore">0</span><span>/40</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" id="progressBar"></div>
+      </div>
+      <div class="pill-counter-right">
+        <span id="answeredCount">0</span><span>/40</span>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <div class="warning-title">
+        <span>⚠️ LỜI NHẮC CỰC KỲ QUAN TRỌNG ⚠️</span>
+      </div>
+      <div class="warning-text">
+        Chỉ có đọc kỹ giải thích ngay sau mỗi câu, sau đó ghi lại từ vựng/cấu trúc mới vào vở để học thì mới thực sự giỏi lên.
+      </div>
+      <div class="warning-subtext">
+        👉 Làm cho xong mà không đọc giải thích hay đọc qua loa không ghi chép thì chỉ tốn thời gian vô ích!<br>
+        👇 <strong>Kéo tới đâu, làm tới đó! *</strong>
+      </div>
+    </div>
+
+    <div id="quizContainer"></div>
+
+    <div class="submit-area">
+      <button class="btn-submit-main" onclick="calculateAndShowResult()">
+        🎉 NỘP BÀI & XEM TỔNG KẾT 🎉
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Score Modal Popup -->
+  <div class="modal-overlay" id="scoreModal">
+    <div class="score-modal">
+      <div class="modal-trophy" id="modalTrophy">🏆</div>
+      <h2 style="color: #2D3436; font-size: 1.5rem; font-weight: 900;">KẾT QUẢ BÀI THI</h2>
+      <div class="score-huge" id="modalPercent">100%</div>
+      <div class="score-fraction" id="modalFraction">Đúng 40 / 40 câu</div>
+
+      <div class="feedback-box">
+        <div class="feedback-teacher">
+          <span>👩‍🏫 Lời nhận xét từ <strong>Ms Lê Hằng English</strong>:</span>
+        </div>
+        <div class="feedback-quote" id="modalTeacherQuote">
+          "Làm tốt lắm, con cố gắng ring điểm 10 ở lần sau nha!"
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+        <button class="btn-modal-close" onclick="closeModal()">Đóng & Xem lại bài</button>
+        <button class="btn-modal-close" style="background: #00C9A7; box-shadow: 0 5px 0 #009688;" onclick="restartQuiz()">Làm lại bài thi 🔄</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playDing() {
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      const now = audioCtx.currentTime;
+      const osc1 = audioCtx.createOscillator();
+      const gain1 = audioCtx.createGain();
+      osc1.type = 'triangle';
+      osc1.frequency.setValueAtTime(659.25, now);
+      gain1.gain.setValueAtTime(0.25, now);
+      gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+      osc1.connect(gain1);
+      gain1.connect(audioCtx.destination);
+      osc1.start(now);
+      osc1.stop(now + 0.35);
+
+      const osc2 = audioCtx.createOscillator();
+      const gain2 = audioCtx.createGain();
+      osc2.type = 'sine';
+      osc2.frequency.setValueAtTime(987.77, now + 0.1);
+      gain2.gain.setValueAtTime(0.3, now + 0.1);
+      gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
+      osc2.connect(gain2);
+      gain2.connect(audioCtx.destination);
+      osc2.start(now + 0.1);
+      osc2.stop(now + 0.6);
+    }
+
+    function playWrongSound() {
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      const now = audioCtx.currentTime;
+      [320, 260, 210].forEach((freq, i) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(freq, now + i * 0.14);
+        gain.gain.setValueAtTime(0.2, now + i * 0.14);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + (i + 1) * 0.14);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now + i * 0.14);
+        osc.stop(now + (i + 1) * 0.14);
+      });
+    }
+
+    const canvas = document.getElementById('confetti-canvas');
+    const ctx = canvas.getContext('2d');
+    let confettiParticles = [];
+    let isAnimatingConfetti = false;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function triggerConfetti(count = 65) {
+      const colors = ['#0984E3', '#FDCB6E', '#00C9A7', '#00D26A', '#FF4757', '#FF9FF3', '#6C5CE7'];
+      for (let i = 0; i < count; i++) {
+        confettiParticles.push({
+          x: window.innerWidth / 2 + (Math.random() - 0.5) * 320,
+          y: window.innerHeight * 0.35 + (Math.random() - 0.5) * 100,
+          w: Math.random() * 10 + 6,
+          h: Math.random() * 8 + 4,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vx: (Math.random() - 0.5) * 14,
+          vy: Math.random() * -12 - 5,
+          rot: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 12,
+          gravity: 0.35,
+          opacity: 1
+        });
+      }
+      if (!isAnimatingConfetti) animateConfetti();
+    }
+
+    function animateConfetti() {
+      if (confettiParticles.length === 0) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        isAnimatingConfetti = false;
+        return;
+      }
+      isAnimatingConfetti = true;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = confettiParticles.length - 1; i >= 0; i--) {
+        const p = confettiParticles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += p.gravity;
+        p.rot += p.rotSpeed;
+        p.opacity -= 0.012;
+        if (p.opacity <= 0 || p.y > window.innerHeight) {
+          confettiParticles.splice(i, 1);
+          continue;
+        }
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rot * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = p.opacity;
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.restore();
+      }
+      requestAnimationFrame(animateConfetti);
+    }
+
+    function initBackgroundElements() {
+      const container = document.getElementById('bgElements');
+      const cloudSvg = '<svg width="120" height="70" viewBox="0 0 24 24" fill="%23FFFFFF"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>';
+      for (let i = 0; i < 4; i++) {
+        const cloud = document.createElement('div');
+        cloud.className = 'floating-cloud';
+        cloud.style.top = `${12 + i * 20}%`;
+        cloud.style.animationDuration = `${24 + i * 8}s`;
+        cloud.style.animationDelay = `${i * 6}s`;
+        cloud.innerHTML = cloudSvg;
+        container.appendChild(cloud);
+      }
+    }
+
+    /* DATA: PASSAGES & 40 QUESTIONS */
+    const passagesData = {
+      "family_moments": {
+        "title": "FAMILY MOMENTS – WHERE LOVE GROWS",
+        "badge": "ĐỌC ĐIỀN THÔNG BÁO (CÂU 1 - 6)",
+        "intro": "Read the following announcement and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 1 to 6:",
+        "content": "<div style=\"background: #F8FAFC; border-radius: 16px; padding: 20px 24px; border: 2px solid #E2E8F0; line-height: 1.85; font-size: 1.05rem; text-align: justify; color: #2D3436;\"><div style=\"text-align: center; font-weight: 900; font-size: 1.3rem; color: #D35400; margin-bottom: 10px;\">🏠 Family Moments – Where Love Grows 🏠</div><p style=\"margin-bottom: 10px;\">Are you looking for a spotlessly clean and cozy home environment that brings your family closer? Family Moments offers professional cleaning services providing peace <span class=\"passage-blank\">(1) ______</span> mind for busy parents who want <span class=\"passage-blank\">(2) ______</span> quality time with their loved ones.</p><p style=\"margin-bottom: 10px;\">Our team, <span class=\"passage-blank\">(3) ______</span> of experienced and reliable staff, specializes in household chores such as doing the laundry, washing the dishes, and tidying up the kitchen. We understand the importance of a clean home free from mess and clutter, which creates a healthy and happy atmosphere.</p><p style=\"margin-bottom: 10px;\">By <span class=\"passage-blank\">(4) ______</span>, families can enjoy more meaningful moments together. Instead of worrying about cleaning, parents can focus on preparing delicious meals or helping children with homework.</p><p>Join thousands of <span class=\"passage-blank\">(5) ______</span> customers who have experienced the benefits of our service. Contact Family Moments today and <span class=\"passage-blank\">(6) ______</span> a break from housework to enjoy what really matters — spending time with your family.</p></div>"
+      },
+      "harmony_homes": {
+        "title": "HARMONY HOMES: CULTIVATING CONNECTIONS",
+        "badge": "ĐỌC ĐIỀN TỜ RƠI / LEAFLET (CÂU 7 - 12)",
+        "intro": "Read the following leaflet and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 7 to 12:",
+        "content": "<div style=\"background: #F8FAFC; border-radius: 16px; padding: 20px 24px; border: 2px solid #E2E8F0; line-height: 1.85; font-size: 1.05rem; text-align: justify; color: #2D3436;\"><div style=\"text-align: center; font-weight: 900; font-size: 1.3rem; color: #0984E3; margin-bottom: 10px;\">🌿 Harmony Homes: Cultivating Connections 🌿</div><p style=\"margin-bottom: 10px;\">Life often presents another challenge, leaving little time for what truly matters: family. Many homes carry a great deal of unseen effort, from household chores to heavy lifting. But what if there was <span class=\"passage-blank\">(7) ______</span> side to daily living?</p><p style=\"margin-bottom: 10px;\">Harmony Homes helps you find it. We offer tailored support, allowing your family to thrive. Our dedicated team can tidy up spaces, <span class=\"passage-blank\">(8) ______</span> groceries, or even set the table for peaceful dinners. This gives a healthy amount of time back, <span class=\"passage-blank\">(9) ______</span> parents can look after their kids, and teenagers can hang out with friends.</p><p style=\"margin-bottom: 10px;\">Instead of feeling <span class=\"passage-blank\">(10) ______</span>, discover joy. We believe in <span class=\"passage-blank\">(11) ______</span> family bonds, promoting respectful and honest communication. Some families choose assistance with cooking, while others prefer help with doing the laundry. We adapt to your <span class=\"passage-blank\">(12) ______</span> of need. Our reliable services are designed to ensure your home is a source of gratitude and happiness. Let us give you a hand.</p><div style=\"text-align: center; font-weight: 900; color: #00BA66;\">✨ Harmony Homes – For families who care. ✨</div></div>"
+      },
+      "healthy_family": {
+        "title": "THE BENEFITS OF BEING IN A HEALTHY FAMILY",
+        "badge": "ĐIỀN MỆNH ĐỀ / CỤM TỪ (CÂU 18 - 22)",
+        "intro": "Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 18 to 22:",
+        "content": "<div style=\"background: #F8FAFC; border-radius: 16px; padding: 20px 24px; border: 2px solid #E2E8F0; line-height: 1.88; font-size: 1.05rem; text-align: justify; color: #2D3436;\"><p style=\"margin-bottom: 10px;\">When you are part of a healthy family, you know that your loved ones <span class=\"passage-blank\">(18) ______</span>. Minors or other members of the family who cannot properly provide for themselves can be comfortable at home knowing that they will always have their needs taken care of. This comfort and <span class=\"passage-blank\">(19) ______</span>.</p><p style=\"margin-bottom: 10px;\">We all go through rough patches in our lives. It is an amazing feeling to know that you have a support system readily available to help you through these rough patches, no matter how bad they get.</p><p style=\"margin-bottom: 10px;\"><span class=\"passage-blank\">(20) ______</span>. This is because happy, healthy families tend to eat healthier, get outside more, and take time to connect with each other daily.</p><p>Children <span class=\"passage-blank\">(21) ______</span>. This is because children from healthy families have been taught how to handle disagreements or <span class=\"passage-blank\">(22) ______</span>, and build resilience when faced with difficult situations.</p></div>"
+      },
+      "grandparents_role": {
+        "title": "THE CHANGING ROLE OF GRANDPARENTS",
+        "badge": "BÀI ĐỌC HIỂU 8 CÂU (CÂU 23 - 30)",
+        "intro": "Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 23 to 30:",
+        "content": "<div style=\"background: #F8FAFC; border-radius: 16px; padding: 20px 24px; border: 2px solid #E2E8F0; line-height: 1.88; font-size: 1.04rem; text-align: justify; color: #2D3436;\"><p style=\"margin-bottom: 10px;\"><b>[Paragraph 1]</b> In today’s busy world, the role of grandparents is changing. They are no longer just older relatives; many now play a more active and vital part in daily family life. This reflects the needs of modern parents and grandparents’ desire to stay connected and contribute. They often become a strong <b style=\"color: #D35400; background: #FFF3CD; padding: 1px 6px; border-radius: 6px;\">pillar</b> of support for the family.</p><p style=\"margin-bottom: 10px;\"><b>[Paragraph 2]</b> Grandparents often help by supporting parents. With both parents working, they frequently assist with childcare, like school pickups or holiday care. They might also help with household tasks or offer financial aid. <u><b>This practical help reduces parents’ stress, making daily routines smoother and more organized</b></u>.</p><p style=\"margin-bottom: 10px;\"><b>[Paragraph 3]</b> Grandparents offer unique benefits to children. They provide unconditional love, security, and a special bond. Children learn valuable lessons, hear family stories, and discover traditions from <b style=\"color: #0984E3; background: #EBF3FA; padding: 1px 6px; border-radius: 6px;\">them</b>. This wisdom and guidance from an older generation can greatly enrich a child’s development and give them a strong sense of belonging.</p><p><b>[Paragraph 4]</b> The relationship is <b style=\"color: #00BA66; background: #E8F8F0; padding: 1px 6px; border-radius: 6px;\">mutual</b>. While grandparents give a lot, they also gain from these connections. Staying active with grandchildren can keep them feeling young, happy, and part of a vibrant family life. These cherished bonds strengthen the entire family, creating a supportive network where love and understanding are passed down, leaving a lasting legacy.</p></div>"
+      },
+      "tech_family": {
+        "title": "HOW TECHNOLOGY AFFECTS FAMILY LIFE",
+        "badge": "BÀI ĐỌC HIỂU 10 CÂU (CÂU 31 - 40)",
+        "intro": "Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 31 to 40:",
+        "content": "<div style=\"background: #F8FAFC; border-radius: 16px; padding: 20px 24px; border: 2px solid #E2E8F0; line-height: 1.88; font-size: 1.04rem; text-align: justify; color: #2D3436;\"><p style=\"margin-bottom: 10px;\"><b>[Paragraph 1]</b> In today’s connected world, technology has become an important part of daily life, greatly changing family life. New digital tools have changed how family members talk, share experiences, and even see their relationships. This widespread use brings both many good chances and some big problems for making family relationships strong. Understanding <b style=\"color: #0984E3; background: #EBF3FA; padding: 1px 6px; border-radius: 6px;\">these two sides</b> is very important to deal with modern family life.</p><p style=\"margin-bottom: 10px;\"><b>[Paragraph 2]</b> On the good side, technology has greatly improved family communication. <b>[I]</b> Family members who live far away can easily talk through video calls, connecting people across distances and <b style=\"color: #00BA66; background: #E8F8F0; padding: 1px 6px; border-radius: 6px;\">keeping strong ties</b>. <b>[II]</b> Learning apps and online games that people play together offer new ways for families to learn and spend quality time. Also, smart devices and online services make managing the home easier, making daily routines more effective and giving families more time together. These helpful things can truly make families closer when used carefully.</p><p style=\"margin-bottom: 10px;\"><b>[Paragraph 3]</b> However, using a lot of technology also brings clear problems. <u><b>Too much time on screens often leads to less face-to-face talk at home, with family members alone with their own devices</b></u>. This can weaken real connection and make people feel <b style=\"color: #D63031; background: #FFEAEA; padding: 1px 6px; border-radius: 6px;\">separated</b>. Worries about privacy, cyberbullying, and bad content also create big risks, especially for young family members. Many constant messages can stop family meals and quiet moments, making good talks harder.</p><p><b>[Paragraph 4]</b> <b>[III]</b> It is important to set clear rules for using devices, like having \"no-tech\" areas or times. <b>[IV]</b> Parents have an important role in showing good ways to use technology and talking openly about being safe online. In the end, while technology offers powerful tools, its real effect on family well-being depends a lot on careful use and always putting real-life interactions first.</p></div>"
+      }
+    };
+
+    function makeQ(id, tag, qText, opts, cor, trans, rule, whyCor, notes, subtext = "", passage_key = "", is_first_in_passage = "") {
+      const keys = ["A", "B", "C", "D"];
+      const options = opts.map((t, idx) => ({ key: keys[idx], text: t }));
+      const analysis = opts.map((t, idx) => ({
+        word: `${keys[idx]}. ${t.replace(/<[^>]*>/g, '').slice(0, 38)}`,
+        badge: keys[idx] === cor ? "Đáp án chuẩn" : "Phương án nhiễu",
+        badgeType: keys[idx] === cor ? "correct" : "wrong",
+        note: notes[idx]
+      }));
+      const whyWrong = [];
+      opts.forEach((t, idx) => {
+        if (keys[idx] !== cor) {
+          whyWrong.push({
+            word: `${keys[idx]}. ${t.replace(/<[^>]*>/g, '').slice(0, 34)}`,
+            reason: notes[idx]
+          });
+        }
+      });
+      return { id, type: tag, question: qText, subtext, options, correct: cor, trans, analysis, whyCorrect: { rule, content: whyCor }, whyWrong, passage_key, is_first_in_passage };
+    }
+
+    const quizData = [
+      /* ==================== PART 1: FAMILY MOMENTS (CÂU 1 - 6) ==================== */
+      makeQ(1, "Cụm từ cố định (Idioms)", "Question 1 (Family Moments): Family Moments offers professional cleaning services providing peace (1)______ mind for busy parents...", ["with", "of", "for", "to"], "B", "Dịch: Family Moments cung cấp dịch vụ dọn dẹp chuyên nghiệp mang lại sự an tâm cho các bậc phụ huynh bận rộn...", "Thành ngữ 'peace of mind':", "Cụm thành ngữ cố định: <span class='highlight-green-tag'>peace of mind</span> = sự yên tâm, sự thanh thản trong tâm trí.", ["sai giới từ", "peace of mind: sự an tâm, yên lòng", "sai giới từ", "sai giới từ"], "", "family_moments", "family_moments"),
+      makeQ(2, "Danh động từ & Động từ nguyên mẫu (Verb Patterns)", "Question 2: ...providing peace of mind for busy parents who want (2)______ quality time with their loved ones.", ["spend", "to spending", "to spend", "spending"], "C", "Dịch: ...mang lại sự an tâm cho các bậc cha mẹ bận rộn, những người muốn dành thời gian chất lượng bên những người thân yêu.", "Cấu trúc 'want + to-V':", "Sau động từ <b>want</b> bắt buộc dùng động từ nguyên mẫu có to: <span class='highlight-green-tag'>to spend</span> (<i>want to spend quality time</i>).", ["thiếu giới từ to", "sai cấu trúc to V-ing", "want to spend: muốn dành thời gian", "want không đi với V-ing khi mang nghĩa mong muốn"]),
+      makeQ(3, "Rút gọn mệnh đề quan hệ (Reduced Relative Clause)", "Question 3: Our team, (3)______ of experienced and reliable staff, specializes in household chores...", ["which consist", "to consist", "consisted", "consisting"], "D", "Dịch: Đội ngũ của chúng tôi, bao gồm những nhân viên giàu kinh nghiệm và đáng tin cậy, chuyên về các công việc gia đình...", "Rút gọn mệnh đề quan hệ chủ động bằng V-ing:", "Động từ <b>consist of</b> (bao gồm) luôn mang nghĩa chủ động (không bao giờ chia bị động). Khi rút gọn mệnh đề quan hệ <i>which consists of</i>, ta dùng hiện tại phân từ: <span class='highlight-green-tag'>consisting</span>.", ["Our team là danh từ tập hợp số ít (chia động từ chính specializes số ít) nên which consist thiếu -s", "không dùng to-V", "consist of không có dạng bị động V-ed", "consisting of: rút gọn chủ động chuẩn xác"], "", "family_moments"),
+      makeQ(4, "Trật tự cụm danh động từ (Gerund Phrase Order)", "Question 4: By (4)______, families can enjoy more meaningful moments together.", ["household sharing responsibilities", "sharing responsibilities household", "sharing household responsibilities", "responsibilities sharing household"], "C", "Dịch: Bằng việc chia sẻ các trách nhiệm công việc trong gia đình, các gia đình có thể tận hưởng những khoảnh khắc ý nghĩa hơn bên nhau.", "Cấu trúc 'By + V-ing + Adj/Noun + Noun':", "Sau giới từ <b>By</b> cần danh động từ <b>sharing</b> (chia sẻ) + cụm danh từ tân ngữ <b>household responsibilities</b> (trách nhiệm việc nhà): <span class='highlight-green-tag'>sharing household responsibilities</span>.", ["sai vị trí V-ing", "đặt household sau responsibilities là sai", "sharing household responsibilities: chuẩn ngữ pháp", "sai vị trí V-ing"], "", "family_moments"),
+      makeQ(5, "Từ loại (Word Form - Tính từ đuôi -ed vs -ing)", "Question 5: Join thousands of (5)______ customers who have experienced the benefits of our service.", ["satisfy", "satisfied", "satisfiable", "satisfying"], "B", "Dịch: Hãy gia nhập cùng hàng ngàn khách hàng hài lòng, những người đã trải nghiệm lợi ích từ dịch vụ của chúng tôi.", "Tính từ đuôi -ed bổ nghĩa cho danh từ chỉ người:", "Để miêu tả cảm xúc hài lòng của khách hàng (<b>customers</b> - danh từ chỉ người), ta dùng tính từ phân từ đuôi -ed: <span class='highlight-green-tag'>satisfied</span> (<i>satisfied customers</i>: những khách hàng cảm thấy hài lòng).", ["satisfy là động từ", "satisfied customers: những khách hàng hài lòng", "satisfiable: có thể đáp ứng", "satisfying dùng miêu tả tính chất sự vật/dịch vụ (satisfying service)"], "", "family_moments"),
+      makeQ(6, "Kết hợp từ cố định (Collocations)", "Question 6: Contact Family Moments today and (6)______ a break from housework to enjoy what really matters...", ["award", "take", "prepare", "use"], "B", "Dịch: Hãy liên hệ với Family Moments ngay hôm nay và nghỉ ngơi tạm rời xa công việc nhà để tận hưởng điều thực sự quan trọng...", "Collocation 'take a break':", "Cụm từ cố định: <span class='highlight-green-tag'>take a break (from sth)</span> = nghỉ giải lao, tạm nghỉ ngơi khỏi công việc gì.", ["award: trao thưởng", "take a break: nghỉ ngơi", "prepare: chuẩn bị", "use: sử dụng"], "", "family_moments"),
+
+      /* ==================== PART 2: HARMONY HOMES LEAFLET (CÂU 7 - 12) ==================== */
+      makeQ(7, "Lượng từ (Quantifiers & Determiners)", "Question 7 (Harmony Homes): Many homes carry a great deal of unseen effort, from household chores to heavy lifting. But what if there was (7)______ side to daily living?", ["other", "the other", "others", "the others"], "B", "Dịch: Nhiều gia đình phải gánh vác rất nhiều nỗ lực thầm lặng... Nhưng điều gì sẽ xảy ra nếu có một mặt khác (khía cạnh còn lại) của cuộc sống thường nhật?", "Lưu ý đáp án theo ngữ cảnh / key trường:", "Danh từ <b>side</b> là danh từ đếm được số ít. Trong 4 lựa chọn (không có <i>another</i> vì câu trước vừa dùng <i>another challenge</i>), từ hạn định duy nhất đi được với danh từ đếm được số ít <b>side</b> mà đúng ngữ pháp là <span class='highlight-green-tag'>the other</span> (<i>the other side</i>: mặt bên kia / khía cạnh đối lập còn lại; một số đề gốc gõ nhầm <i>other</i> thay vì <i>another</i>, nhưng xét chuẩn ngữ pháp tiếng Anh thì <i>other + N số nhiều</i>, còn <i>the other + N số ít</i>).", ["other chuẩn ngữ pháp phải đi với danh từ số nhiều (other sides)", "the other + danh từ số ít (the other side: mặt đối diện/khía cạnh còn lại)", "others là đại từ, không đứng trước danh từ side", "the others là đại từ, không đứng trước danh từ side"], "", "harmony_homes", "harmony_homes"),
+      makeQ(8, "Cụm động từ (Phrasal Verbs)", "Question 8: Our dedicated team can tidy up spaces, (8)______ groceries, or even set the table for peaceful dinners.", ["shop for", "go after", "pick off", "buy up"], "A", "Dịch: Đội ngũ tận tâm của chúng tôi có thể dọn dẹp không gian, đi mua thực phẩm tạp hóa, hoặc thậm chí bày bàn ăn cho những bữa tối yên bình.", "Collocation 'shop for groceries':", "Cụm từ chuẩn trong SGK Global Success 10 Unit 1: <span class='highlight-green-tag'>shop for groceries</span> = đi chợ mua thực phẩm và đồ dùng thiết yếu.", ["shop for groceries: mua sắm thực phẩm/tạp hóa", "go after: đuổi theo", "pick off: bắn tỉa / nhặt bỏ", "buy up: mua vét sạch hàng tích trữ"], "", "harmony_homes"),
+      makeQ(9, "Liên từ (Conjunctions)", "Question 9: This gives a healthy amount of time back, (9)______ parents can look after their kids, and teenagers can hang out with friends.", ["and", "or", "nor", "so"], "D", "Dịch: Điều này trả lại một quỹ thời gian dồi dào, vì vậy cha mẹ có thể chăm sóc con cái và thanh thiếu niên có thể đi chơi với bạn bè.", "Liên từ chỉ kết quả 'so':", "Vế trước nêu nguyên nhân (dịch vụ giúp tiết kiệm thời gian), vế sau nêu kết quả đạt được nên dùng liên từ <span class='highlight-green-tag'>so</span> (vì vậy, do đó).", ["and: và", "or: hoặc", "nor: cũng không", "so: vì vậy, để mà (chỉ kết quả)"], "", "harmony_homes"),
+      makeQ(10, "Từ vựng tính từ (Adjectives)", "Question 10: Instead of feeling (10)______, discover joy.", ["peaceful", "overwhelmed", "confident", "tired"], "B", "Dịch: Thay vì cảm thấy bị quá tải/choáng ngợp bởi công việc, hãy khám phá niềm vui.", "Ngữ cảnh tương phản 'Instead of feeling...':", "Đối lập với 'discover joy' (khám phá niềm vui) và gắn với gánh nặng việc nhà là cảm giác bị đè nặng, quá tải: <span class='highlight-green-tag'>overwhelmed</span>.", ["peaceful: yên bình (tích cực)", "overwhelmed: bị quá tải, choáng ngợp bởi quá nhiều việc", "confident: tự tin (tích cực)", "overwhelmed là từ vựng nâng cao chuẩn xác nhất trong văn cảnh quảng cáo dịch vụ giảm tải việc nhà"], "", "harmony_homes"),
+      makeQ(11, "Danh động từ sau giới từ (Gerunds)", "Question 11: We believe in (11)______ family bonds, promoting respectful and honest communication.", ["strong", "strengthened", "strengthening", "strengthen"], "C", "Dịch: Chúng tôi tin tưởng vào việc củng cố sợi dây gắn kết gia đình, thúc đẩy giao tiếp tôn trọng và chân thành.", "Sau giới từ 'in' + V-ing + Tân ngữ:", "Sau giới từ <b>in</b> (<i>believe in</i>) và đứng trước tân ngữ <i>family bonds</i> (song hành với <i>promoting...</i> ở vế sau), ta dùng danh động từ <span class='highlight-green-tag'>strengthening</span> (việc làm bền chặt/củng cố).", ["strong (adj): nếu dùng tính từ thì không song hành với V-ing promoting phía sau", "strengthened: V-ed", "strengthening family bonds: việc củng cố sự gắn kết gia đình (song hành với promoting)", "strengthen: động từ nguyên mẫu"], "", "harmony_homes"),
+      makeQ(12, "Từ vựng (Vocabulary)", "Question 12: Some families choose assistance with cooking, while others prefer help with doing the laundry. We adapt to your (12)______ of need.", ["deal", "amount", "variety", "level"], "D", "Dịch: Một số gia đình chọn hỗ trợ nấu ăn, trong khi những gia đình khác thích giúp giặt giũ. Chúng tôi thích ứng với mức độ nhu cầu của bạn.", "Cụm từ 'level of need':", "Đi với tính từ sở hữu <b>your</b> và giới từ <b>of need</b> (nhu cầu ít hay nhiều của bạn) là danh từ <span class='highlight-green-tag'>level</span> (<i>your level of need</i>: mức độ nhu cầu của gia đình bạn).", ["a great deal of (không đi sau your)", "amount of (không đi sau your theo nghĩa này)", "a variety of + N số nhiều", "your level of need: mức độ nhu cầu của bạn"], "", "harmony_homes"),
+
+      /* ==================== PART 3: ARRANGEMENT (CÂU 13 - 17) ==================== */
+      makeQ(13, "Sắp xếp hội thoại 3 câu (Dialogue Arrangement)", "Question 13: Mark the letter A, B, C or D to indicate the best arrangement of utterances to make a cohesive exchange:", ["a-c-b", "b-a-c", "b-c-a", "a-b-c"], "B", "Dịch: Sắp xếp hội thoại ngắn giữa Minh và Lan về áp lực ôn thi.", "Mạch hội thoại Than phiền → Đồng cảm & Khuyên → Đáp lại:", "1. <b>b. Minh:</b> Tớ thấy căng thẳng quá với việc ôn tập. Không tập trung nổi nữa.<br>2. <b>a. Lan:</b> Tớ cũng thế (Same here). Tớ bắt đầu nghỉ giải lao ngắn và đi dạo—hiệu quả lắm.<br>3. <b>c. Minh:</b> Nghe hay đấy. Tối nay tớ sẽ thử.<br>Thứ tự đúng: <span class='highlight-green-tag'>b - a - c</span>.", ["Same here không đứng đầu", "b - a - c: chuẩn xác", "sai trình tự", "sai câu mở đầu"], "<b>a. Lan:</b> Same here. I started taking short breaks and going for a walk—it really helps.<br><b>b. Minh:</b> I feel so stressed with all the revision. I can't focus anymore.<br><b>c. Minh:</b> That sounds good. I'll try that tonight after studying."),
+      makeQ(14, "Sắp xếp hội thoại 5 câu (Dialogue Arrangement)", "Question 14: Mark the letter A, B, C or D to indicate the best arrangement of utterances to make a cohesive exchange:", ["c-b-d-e-a", "a-e-d-b-a", "d-b-a-e-c", "d-e-c-b-a"], "D", "Dịch: Sắp xếp cuộc trò chuyện giữa bà Linh và bà Hoa về cách giúp con cái giảm áp lực thi cử.", "Mạch hội thoại luân phiên Mrs. Linh - Mrs. Hoa:", "1. <b>d. Mrs. Linh:</b> Con trai tôi dạo này căng thẳng quá. Áp lực thi cử thực sự đè nặng lên cháu.<br>2. <b>e. Mrs. Hoa:</b> Tôi hiểu mà. Con gái tôi năm ngoái cũng vậy. Tôi đã cho cháu nghỉ giải lao ngắn và ngủ đủ giấc.<br>3. <b>c. Mrs. Linh:</b> Ý kiến hay đấy. Tôi đang pha trà thảo mộc và khuyến khích cháu đi bộ ngắn.<br>4. <b>b. Mrs. Hoa:</b> Đúng rồi! Tập thể dục nhẹ nhàng giúp ích lắm (khớp với <i>short walks</i> ở câu c)...<br>5. <b>a. Mrs. Linh:</b> Cảm ơn bà, tôi sẽ ghi nhớ điều đó.<br>Thứ tự đúng: <span class='highlight-green-tag'>d - e - c - b - a</span>.", ["sai mở đầu", "sai mở đầu", "đặt b ngay sau d là sai vì d chưa nhắc tới thể dục", "d - e - c - b - a: chuẩn xác tuyệt đối"], "<b>a. Mrs. Linh:</b> Thanks, I’ll keep that in mind. I think we, as parents, need to stay calm too.<br><b>b. Mrs. Hoa:</b> Yes! Light exercise really helps. I also reminded her that the most important thing is to try her best, not to be perfect.<br><b>c. Mrs. Linh:</b> That’s a good idea. I’ve been making him herbal tea and encouraging him to go for short walks.<br><b>d. Mrs. Linh:</b> My son’s been so stressed lately. The exam pressure is really getting to him.<br><b>e. Mrs. Hoa:</b> I understand. My daughter went through the same last year. I tried to give her short breaks and made sure she got enough sleep."),
+      makeQ(15, "Sắp xếp bức thư (Letter Arrangement)", "Question 15: Mark the letter A, B, C or D to indicate the best arrangement of sentences to make a cohesive letter (Dear Mum, ... Love, Huy):", ["b-a-e-d-c", "e-a-b-c-d", "b-e-c-a-d", "b-a-e-c-d"], "B", "Dịch: Sắp xếp bức thư của Huy gửi Mẹ tâm sự về việc học tại trường nội trú.", "Mạch bức thư Mở đầu bối cảnh → Áp lực bài vở → Nhớ nhà → Lo lắng → Lời kết:", "1. <b>e:</b> Con đã ở trường nội trú được vài tháng, và khối lượng bài vở nặng hơn con nghĩ.<br>2. <b>a:</b> Số lượng bài tập và bài kiểm tra nhiều không chịu nổi...<br>3. <b>b:</b> Con nhớ nhà và thấy áp lực...<br>4. <b>c:</b> Đôi khi con lo mình làm chưa đủ tốt...<br>5. <b>d:</b> Xin mẹ biết rằng con yêu ngôi trường này, nhưng con cần sự động viên của mẹ.<br>Thứ tự đúng: <span class='highlight-green-tag'>e - a - b - c - d</span>.", ["sai câu mở đầu", "e - a - b - c - d: chuẩn bố cục", "sai câu mở đầu", "sai câu mở đầu"], "<b>Dear Mum,</b><br><b>a.</b> It feels like the number of assignments and tests is “unbearable” and makes me anxious most days.<br><b>b.</b> I miss home and feel under pressure to study, join clubs, and make friends all at once.<br><b>c.</b> Sometimes, I worry that I am not doing well enough, and it is hurting my focus and happiness.<br><b>d.</b> Please know that I love this school, but I need your understanding and support so I can manage better.<br><b>e.</b> I have been here at boarding school for a few months, and the workload is much more intense than I expected.<br><b>Love, Huy</b>"),
+      makeQ(16, "Sắp xếp đoạn văn (Paragraph Arrangement)", "Question 16: Mark the letter A, B, C or D to indicate the best arrangement of sentences to make a coherent paragraph:", ["b - d - a - e - c", "a - b - e - d - c", "d - b - e - a - c", "e - d - b - a - c"], "A", "Dịch: Sắp xếp đoạn văn nói về sự đa dạng của các kiểu gia đình hiện đại ngày nay.", "Phân tích câu chủ đề & từ quy chiếu:", "1. <b>b (Câu chủ đề):</b> Gia đình ngày nay có thể thuộc nhiều kiểu khác nhau, không chỉ là kiểu bố-mẹ-con thông thường.<br>2. <b>d:</b> Các nền tảng trực tuyến giúp tạo ra những gia đình mới, như cha mẹ đơn thân sống cùng nhau hoặc cha mẹ đồng giới.<br>3. <b>a:</b> <i><b>These families</b></i> (Những gia đình này) cho thấy tình yêu và sự quan tâm quan trọng hơn huyết thống DNA.<br>4. <b>e:</b> <i><b>Many families also include</b></i> ông bà, bạn bè hoặc cha mẹ kế...<br>5. <b>c (Câu kết):</b> <i><b>All together, these changes</b></i> giúp mọi người thấy gia đình là bất kỳ nhóm nào trao nhau sự nâng đỡ và hạnh phúc.<br>Thứ tự đúng: <span class='highlight-green-tag'>b - d - a - e - c</span>.", ["b - d - a - e - c: chuẩn xác từ câu chủ đề đến câu kết", "không bắt đầu bằng These families (a)", "câu b mới là câu chủ đề mở đoạn", "không bắt đầu bằng Many families also (e)"], "<b>a.</b> These families show that love and care are more important than shared DNA.<br><b>b.</b> Families today can be many different types, not only the usual mom-dad-kids home.<br><b>c.</b> All together, these changes help people see that a family is any group that gives support and happiness.<br><b>d.</b> Online platforms help people create new families, such as single parents living together or two parents of the same gender.<br><b>e.</b> Many families also include grandparents, friends, or step-parents who may live together and share daily responsibilities."),
+      makeQ(17, "Sắp xếp đoạn văn (Paragraph Arrangement)", "Question 17: Mark the letter A, B, C or D to indicate the best arrangement of sentences to make a coherent paragraph:", ["d - e - a - c - b", "d - a - e - c - b", "c - b - d - a - e", "c - d - a - e - b"], "B", "Dịch: Sắp xếp đoạn văn kể về sự phân công công việc nhà công bằng giữa các thành viên trong gia đình.", "Trình tự Câu chủ đề → Bố mẹ → Anh chị em → Em út → Kết quả vinh danh:", "1. <b>d (Câu chủ đề):</b> Gia đình tôi thực sự trân trọng việc chia sẻ việc nhà vì nó tạo ra lòng biết ơn và trách nhiệm.<br>2. <b>a (Bố mẹ):</b> Bố thường làm việc nặng... trong khi mẹ đi chợ và nấu ăn.<br>3. <b>e (Anh chị em tôi):</b> Anh chị em tôi và tôi thay phiên nhau rửa bát, giặt đồ, đổ rác...<br>4. <b>c (Em gái út):</b> Ngay cả cô em gái út (<i>Even our youngest sister</i>) cũng cho cún ăn...<br>5. <b>b (Câu kết):</b> Sự phân chia công việc công bằng này (<i>This fair distribution of chores</i>) gần đây đã được trung tâm cộng đồng trao giấy chứng nhận.<br>(Lưu ý: Cả <b>d - a - e - c - b</b> và <b>d - e - a - c - b</b> đều rất mạch lạc, trong đó đi từ Bố mẹ (a) → Con cái (e) → Em út (c) là trật tự chuẩn nhất: <span class='highlight-green-tag'>B. d - a - e - c - b</span>).", ["d - e - a - c - b: đặt con cái trước bố mẹ", "d - a - e - c - b: trình tự chuẩn từ Bố mẹ (a) -> Các con (e) -> Em út (c) -> Giải thưởng (b)", "không mở đầu bằng Even our youngest sister (c)", "không mở đầu bằng (c)"], "<b>a.</b> My father usually does the heavy lifting—lifting groceries and fixing things—while my mother buys groceries, sets the table, and cooks meals.<br><b>b.</b> This fair distribution of chores was recently recognized when our family was awarded a small certificate by our community center—an appreciable result that made us all feel proud and motivated to keep supporting each other.<br><b>c.</b> Even our youngest sister gratefully feeds our puppy, showing how small chores can benefit her confidence and life skills from a young age.<br><b>d.</b> Our family truly appreciates sharing household chores because it creates a sense of gratitude and responsibility in each of us.<br><b>e.</b> My siblings and I take turns washing dishes, doing the laundry, taking out the rubbish, and watering the plants, which helps us learn responsibility and character through real experience."),
+
+      /* ==================== PART 4: SENTENCE COMPLETION (CÂU 18 - 22) ==================== */
+      makeQ(18, "Hoàn thành mệnh đề (Clause Completion)", "Question 18 (Healthy Family): When you are part of a healthy family, you know that your loved ones (18)______.", [
+        "forget their responsibilities and focus on their own interests",
+        "worked tirelessly to fulfill all your personal desires",
+        "will always work to ensure that your basic needs are met",
+        "have been able to meet your diverse requirements effectively"
+      ], "C", "Dịch: Khi bạn là một phần của một gia đình lành mạnh, bạn biết rằng những người thân yêu của bạn sẽ luôn nỗ lực để đảm bảo các nhu cầu cơ bản của bạn được đáp ứng.", "Sự ăn khớp với câu liền sau:", "Câu liền sau giải thích: <i>'knowing that <b>they will always have their needs taken care of</b>'</i> (biết rằng các nhu cầu của họ sẽ luôn được chăm lo). Do đó vế (18) tương ứng trực tiếp là: <span class='highlight-green-tag'>will always work to ensure that your basic needs are met</span>.", ["mang nghĩa tiêu cực (quên trách nhiệm)", "sai thì quá khứ worked và personal desires (ham muốn cá nhân)", "khớp hoàn hảo cả về thì (will always) lẫn ý nghĩa (basic needs are met)", "sai ngữ cảnh"], "", "healthy_family", "healthy_family"),
+      makeQ(19, "Hoàn thành câu (Sentence Completion)", "Question 19: Minors or other members of the family who cannot properly provide for themselves can be comfortable at home knowing that they will always have their needs taken care of. This comfort and (19)______.", [
+        "eventually security relieves the pressure that many individuals encounter",
+        "the assurance immediately minimize difficulties that many others deal with",
+        "safety significantly reduces the stress that many other people face every day",
+        "lightening the burden certainly lightens the burden a lot of people bear"
+      ], "C", "Dịch: Sự thoải mái và cảm giác an toàn này làm giảm đáng kể sự căng thẳng mà nhiều người khác phải đối mặt mỗi ngày.", "Cấu trúc Chủ ngữ ghép & Hòa hợp Chủ - Vị:", "Sau từ chỉ định số ít <b>This comfort and...</b> cần một danh từ không đếm được tạo thành một khái niệm thống nhất đi với động từ chia ngôi thứ 3 số ít: <b>This comfort and safety significantly reduces...</b> (<span class='highlight-green-tag'>C</span>).<br>• Loại A vì trạng từ <i>eventually</i> không đứng giữa <i>and</i> và danh từ <i>security</i>.<br>• Loại B vì động từ <i>minimize</i> nguyên mẫu nhưng <i>the assurance</i> thừa mạo từ.<br>• Loại D vì lặp từ <i>lightening the burden... lightens the burden</i>.", ["trạng từ eventually đặt sai vị trí giữa liên từ and và danh từ security", "thừa mạo từ the và động từ minimize không chia phù hợp", "This comfort and safety significantly reduces the stress...: chuẩn ngữ pháp và ý nghĩa", "lỗi lặp từ nặng nề"], "", "healthy_family"),
+      makeQ(20, "Điền câu chủ đề đoạn văn (Topic Sentence)", "Question 20: (20)______. This is because happy, healthy families tend to eat healthier, get outside more, and take time to connect with each other daily.", [
+        "Children in healthy families often face more emotional challenges than others",
+        "Positive family efforts will contribute to children's development and dynamism",
+        "A strong family unit can profoundly influence the well-being of its members",
+        "When a family unit is healthy and happy, the children of the family will benefit greatly"
+      ], "C", "Dịch: Một đơn vị gia đình vững mạnh có thể ảnh hưởng sâu sắc đến sức khỏe và hạnh phúc của các thành viên. Điều này là bởi vì những gia đình hạnh phúc, lành mạnh có xu hướng ăn uống lành mạnh hơn, ra ngoài vận động nhiều hơn và dành thời gian kết nối với nhau hàng ngày.", "Sự bao quát toàn bộ các thành viên trong đoạn 3:", "Câu giải thích phía sau nói về thói quen chung của <b>cả gia đình</b> (ăn uống lành mạnh, ra ngoài nhiều hơn, kết nối với nhau mỗi ngày), tức là tác động lên sức khỏe/hạnh phúc (<b>well-being</b>) của tất cả các thành viên chứ không chỉ riêng trẻ em (trẻ em nằm ở đoạn 4). Đáp án chuẩn xác nhất là <span class='highlight-green-tag'>C. A strong family unit can profoundly influence the well-being of its members</span>.", ["mang nghĩa tiêu cực (trái ngược bài đọc)", "chỉ giới hạn ở trẻ em", "phù hợp hoàn hảo với ngữ cảnh đoạn 3 nói về sức khỏe (well-being) của mọi thành viên", "chỉ giới hạn ở trẻ em (nội dung của đoạn 4)"], "", "healthy_family"),
+      makeQ(21, "Mệnh đề quan hệ & Sự hòa hợp Chủ - Vị", "Question 21: Children (21)______. This is because children from healthy families have been taught how to handle disagreements...", [
+        "that shows healthy behavior is often more self-reliant than other youth",
+        "who come from healthy families tend to be more independent than those who do not",
+        "from less fortunate families become independent and grow into friendly, well-adjusted adults",
+        "coming from healthy families often can't be independent enough to solve their own problems"
+      ], "B", "Dịch: Những đứa trẻ xuất thân từ các gia đình lành mạnh có xu hướng tự lập hơn những đứa trẻ không có được điều đó.", "Ngữ pháp với chủ ngữ số nhiều 'Children':", "Chủ ngữ <b>Children</b> là danh từ chỉ người số nhiều:<br>• Loại A vì dùng <i>shows... is</i> (chia số ít cho danh từ số nhiều <i>Children</i> là sai ngữ pháp).<br>• Loại C vì nói về <i>less fortunate families</i> (lạc đề).<br>• Loại D vì nói <i>can't be independent</i> (ngược nghĩa).<br>• Chọn <span class='highlight-green-tag'>B</span>: <b>who come from healthy families tend to be more independent than those who do not</b>.", ["sai ngữ pháp: Children là số nhiều không dùng shows và is", "chuẩn ngữ pháp (who come... tend to be) và khớp với câu giải thích phía sau", "sai đối tượng (less fortunate families)", "ngược nghĩa hoàn toàn (can't be independent)"], "", "healthy_family"),
+      makeQ(22, "Cấu trúc song hành (Parallel Structure)", "Question 22: This is because children from healthy families have been taught how to handle disagreements or (22)______, and build resilience when faced with difficult situations.", [
+        "arguments individually and make their own decisions confidently",
+        "challenges by themselves, deciding what is best for themselves",
+        "problems independently, demonstrating strong self-assurance",
+        "conflicts on their own, be confident in their choices"
+      ], "A", "Dịch: Điều này là do trẻ em từ các gia đình lành mạnh đã được dạy cách tự mình xử lý những bất đồng hoặc các cuộc tranh cãi, tự tin đưa ra quyết định của riêng mình, và xây dựng khả năng phục hồi khi đối mặt với các tình huống khó khăn.", "Cấu trúc song hành động từ nguyên mẫu 'handle ..., make ..., and build ...':", "Câu có cấu trúc liệt kê 3 cụm động từ nguyên mẫu nối bằng <b>and</b> sau <i>how to</i>:<br>1. <b>handle</b> disagreements or <b>arguments individually</b><br>2. <b>and make</b> their own decisions confidently,<br>3. <b>and build</b> resilience...<br>(Lưu ý: Phương án A hoặc C đều rất hợp nghĩa, trong đó <span class='highlight-green-tag'>A</span> đi cặp từ đồng nghĩa <i>disagreements or arguments</i> và cấu trúc động từ song hành rõ nét nhất).", ["disagreements or arguments individually and make their own decisions confidently: chuẩn song hành", "lặp từ themselves 2 lần liên tiếp", "problems independently, demonstrating strong self-assurance (cũng có thể dùng nếu tách mệnh đề phân từ)", "sai ngữ pháp vì thiếu liên từ trước be confident"], "", "healthy_family"),
+
+      /* ==================== PART 5: GRANDPARENTS PASSAGE (CÂU 23 - 30) ==================== */
+      makeQ(23, "Đọc hiểu - Chi tiết KHÔNG được đề cập (NOT Mentioned)", "Question 23 (Grandparents Passage): Which of the following is NOT mentioned as a way grandparents commonly support parents in modern families?", [
+        "Helping to pick up children from school.",
+        "Assisting with household chores.",
+        "Providing professional career advice.",
+        "Giving emotional support during stressful times."
+      ], "C", "Dịch: Điều nào sau đây KHÔNG được đề cập như một cách mà ông bà thường hỗ trợ cha mẹ trong các gia đình hiện đại?", "Đối chiếu thông tin đoạn 1 và đoạn 2:", "Trong đoạn 2, ông bà hỗ trợ cha mẹ qua: đón cháu đi học về (<i>school pickups</i> - A), làm việc nhà (<i>household tasks</i> - B), hỗ trợ tài chính (<i>financial aid</i>) và giảm căng thẳng/chỗ dựa tinh thần (<i>pillar of support / reduces parents' stress</i> - D). Hoàn toàn **không có** thông tin ông bà tư vấn nghề nghiệp chuyên môn: <span class='highlight-green-tag'>Providing professional career advice</span>.", ["có trong đoạn 2 (school pickups)", "có trong đoạn 2 (help with household tasks)", "KHÔNG được đề cập trong bài", "có trong đoạn 1 & 2 (pillar of support / reduces stress)"], "", "grandparents_role", "grandparents_role"),
+      makeQ(24, "Đọc hiểu - Từ đồng nghĩa (CLOSEST in meaning)", "Question 24: The word \"<u>pillar</u>\" in paragraph 1 is closest in meaning to ______.", [
+        "supporter",
+        "structure",
+        "foundation",
+        "responsibility"
+      ], "C", "Dịch: Từ \"pillar\" (trụ cột / nền tảng nâng đỡ) ở đoạn 1 gần nghĩa nhất với từ nào?", "Nghĩa ẩn dụ của 'a strong pillar of support':", "Từ <b>pillar</b> nghĩa gốc là cột trụ kiến trúc, nghĩa bóng trong <i>a strong pillar of support</i> là nền tảng, trụ cột vững chắc nâng đỡ gia đình, gần nghĩa nhất với <span class='highlight-green-tag'>foundation</span> (nền tảng) hoặc <span class='highlight-green-tag'>supporter</span> (người nâng đỡ). Trong ngữ cảnh <i>a strong [foundation/pillar] of support</i> (danh từ chỉ vật/khái niệm đi với <i>of support</i>), <b>foundation</b> hoặc <b>supporter</b> đều được xét đến (theo chuẩn Collocation tiếng Anh: <i>a pillar/foundation of support</i>).", ["supporter: người ủng hộ (không thường ghép 'a strong supporter of support' vì bị lặp nghĩa)", "structure: cấu trúc", "foundation: nền tảng vững chắc (a strong foundation of support)", "responsibility: trách nhiệm"], "", "grandparents_role"),
+      makeQ(25, "Đọc hiểu - Từ trái nghĩa (OPPOSITE in meaning)", "Question 25: The word \"<u>mutual</u>\" in paragraph 4 is OPPOSITE in meaning to ______.", [
+        "one-sided.",
+        "balanced.",
+        "connected.",
+        "respectful."
+      ], "A", "Dịch: Từ \"mutual\" (có qua có lại / song phương từ hai phía) ở đoạn 4 TRÁI NGHĨA với từ nào?", "Phân tích nghĩa từ 'mutual':", "Đoạn 4 giải thích: <i>'The relationship is <b>mutual</b>. While grandparents give a lot, they also gain from these connections.'</i> (Mối quan hệ mang tính hai chiều cùng có lợi). Do đó từ trái nghĩa hoàn toàn là <span class='highlight-green-tag'>one-sided</span> (một chiều, phiến diện từ một phía).", ["one-sided: một chiều (trái nghĩa với mutual: hai chiều/lẫn nhau)", "balanced: cân bằng (gần nghĩa)", "connected: gắn kết", "respectful: tôn trọng"], "", "grandparents_role"),
+      makeQ(26, "Đọc hiểu - Từ quy chiếu (Reference Word)", "Question 26: What does the word \"<u>them</u>\" in paragraph 3 refer to?", [
+        "traditions.",
+        "family.",
+        "children.",
+        "grandparents."
+      ], "D", "Dịch: Từ \"them\" ở đoạn 3 quy chiếu cho đối tượng nào?", "Phân tích mạch câu đoạn 3:", "Đoạn 3 viết: <i>'<b>Grandparents</b> offer unique benefits to children... Children learn valuable lessons, hear family stories, and discover traditions from <b>them</b>.'</i> → Trẻ em học bài học quý giá, nghe chuyện gia đình và khám phá truyền thống từ **ông bà**: <span class='highlight-green-tag'>grandparents</span>.", ["không thể khám phá truyền thống từ truyền thống", "family là số ít", "trẻ em là chủ ngữ của câu, không tự học từ chính mình", "grandparents: trẻ em học hỏi truyền thống từ ông bà"], "", "grandparents_role"),
+      makeQ(27, "Đọc hiểu - Diễn giải câu (Paraphrasing)", "Question 27: Which of the following best paraphrases the sentence \"<u>This practical help reduces parents' stress, making daily routines smoother and more organized.</u>\" in paragraph 2?", [
+        "Grandparents' help eases parents' stress and makes daily tasks more manageable.",
+        "Grandparents increase parents' stress due to overinvolvement in family matters.",
+        "Parents' daily routines improve only when they manage stress on their own.",
+        "Without practical support, grandparents may feel excluded from daily parenting duties."
+      ], "A", "Dịch: Câu nào sau đây diễn giải đúng nhất câu gạch chân ở đoạn 2: 'Sự giúp đỡ thiết thực này làm giảm căng thẳng cho cha mẹ, giúp công việc thường nhật trôi chảy và ngăn nắp hơn'?", "Đối chiếu các cặp từ đồng nghĩa:", "• <i>This practical help</i> = <b>Grandparents' help</b><br>• <i>reduces parents' stress</i> = <b>eases parents' stress</b><br>• <i>making daily routines smoother and more organized</i> = <b>makes daily tasks more manageable</b>.<br>Đáp án chuẩn xác 100% là <span class='highlight-green-tag'>A</span>.", ["diễn giải chuẩn xác từng vế của câu gốc", "ngược nghĩa (increase stress)", "sai vì có từ only on their own", "sai thông tin hoàn toàn"], "", "grandparents_role"),
+      makeQ(28, "Đọc hiểu - Nhận định ĐÚNG (TRUE Statement)", "Question 28: Which of the following statements is TRUE according to the passage?", [
+        "Grandparents usually have a limited role in teaching children about family traditions.",
+        "The active role of grandparents can benefit both them and their grandchildren.",
+        "Grandparents often feel left out of family life when they retire.",
+        "Children tend to form weaker bonds with grandparents compared to their parents."
+      ], "B", "Dịch: Nhận định nào sau đây là ĐÚNG theo bài đọc?", "Dẫn chứng từ đoạn 3 và đoạn 4:", "Đoạn 3 nêu lợi ích cho các cháu (<i>offer unique benefits to children</i>) và đoạn 4 khẳng định mối quan hệ này mang lại lợi ích cho cả hai phía (<i>While grandparents give a lot, they also gain from these connections</i>). Do đó nhận định đúng là <span class='highlight-green-tag'>B. The active role of grandparents can benefit both them and their grandchildren</span>.", ["sai vì ông bà dạy truyền thống cho cháu rất nhiều (đoạn 3)", "ĐÚNG theo đoạn 3 và đoạn 4 (lợi ích song phương)", "sai vì ông bà ngày nay tham gia rất tích cực (active and vital part)", "sai vì bài nói special bond (mối gắn kết đặc biệt)"], "", "grandparents_role"),
+      makeQ(29, "Đọc hiểu - Định vị thông tin theo đoạn (Paragraph Location)", "Question 29: In which paragraph does the writer primarily discuss the benefits that children receive from their grandparents?", [
+        "Paragraph 2",
+        "Paragraph 1",
+        "Paragraph 4",
+        "Paragraph 3"
+      ], "D", "Dịch: Ở đoạn văn nào tác giả chủ yếu bàn về những lợi ích mà trẻ em nhận được từ ông bà của mình?", "Câu chủ đề của Đoạn 3:", "Đoạn 3 mở đầu bằng câu chủ đề trực tiếp: <i>'<b>Grandparents offer unique benefits to children.</b> They provide unconditional love, security, and a special bond...'</i>. Do đó đáp án là <span class='highlight-green-tag'>D. Paragraph 3</span>.", ["Paragraph 2 nói về hỗ trợ bố mẹ (supporting parents)", "Paragraph 1 giới thiệu chung", "Paragraph 4 nói về lợi ích hai chiều đối với ông bà", "Paragraph 3: bàn trực tiếp về lợi ích trẻ em nhận được từ ông bà"], "", "grandparents_role"),
+      makeQ(30, "Đọc hiểu - Định vị quan hệ Nhân - Quả theo đoạn", "Question 30: In which paragraph does the writer explain a cause-and-effect relationship regarding how grandparent involvement positively impacts parents' daily lives?", [
+        "Paragraph 2",
+        "Paragraph 1",
+        "Paragraph 4",
+        "Paragraph 3"
+      ], "A", "Dịch: Ở đoạn văn nào tác giả giải thích mối quan hệ nguyên nhân - kết quả về việc sự tham gia của ông bà tác động tích cực như thế nào đến cuộc sống hàng ngày của cha mẹ?", "Dẫn chứng từ Đoạn 2:", "Đoạn 2 phân tích việc ông bà giúp trông cháu, làm việc nhà, hỗ trợ tài chính (Nguyên nhân) dẫn đến kết quả là giảm căng thẳng cho cha mẹ và làm thói quen hàng ngày trôi chảy hơn (<i>reduces parents' stress, making daily routines smoother...</i>). Đáp án đúng là <span class='highlight-green-tag'>A. Paragraph 2</span>.", ["Paragraph 2: giải thích trực tiếp tác động tích cực lên cuộc sống hàng ngày của cha mẹ", "Paragraph 1: mở bài", "Paragraph 4: kết bài", "Paragraph 3: nói về trẻ em"], "", "grandparents_role"),
+
+      /* ==================== PART 6: TECHNOLOGY PASSAGE (CÂU 31 - 40) ==================== */
+      makeQ(31, "Đọc hiểu - Điền câu vào vị trí [I], [II], [III], [IV] (Sentence Insertion)", "Question 31 (Technology Passage): Where in paragraph [ ] does the following sentence best fit?<br><b>\"As technology is here to stay in our lives, families need to find a good balance.\"</b>", [
+        "[I]",
+        "[II]",
+        "[III]",
+        "[IV]"
+      ], "C", "Dịch: Câu văn sau đây phù hợp nhất để điền vào vị trí nào?<br>'Vì công nghệ sẽ luôn hiện diện trong cuộc sống của chúng ta, các gia đình cần tìm ra một sự cân bằng tốt.'", "Câu chủ đề mở đầu Đoạn 4 (Giải pháp cân bằng):", "Sau khi Đoạn 2 nêu mặt tích cực và Đoạn 3 nêu mặt tiêu cực, Đoạn 4 chuyển sang **giải pháp** (<i>It is important to set clear rules for using devices...</i>). Câu văn <i>'As technology is here to stay in our lives, families need to find a good balance'</i> đóng vai trò làm câu mở đầu chuyển ý hoàn hảo tại vị trí <span class='highlight-green-tag'>[III]</span> (đầu đoạn 4) trước khi nêu cách thiết lập quy tắc cụ thể.", ["[I] đang liệt kê mặt tốt ở đoạn 2", "[II] đang liệt kê mặt tốt ở đoạn 2", "[III]: vị trí mở đầu đoạn 4 dẫn dắt vào việc lập quy tắc cân bằng công nghệ", "[IV] làm ngắt mạch giữa việc lập quy tắc và vai trò làm gương của cha mẹ"], "", "tech_family", "tech_family"),
+      makeQ(32, "Đọc hiểu - Cụm từ đồng nghĩa (CLOSEST in meaning)", "Question 32: The phrase \"<u>keeping strong ties</u>\" in paragraph 2 is closest in meaning to ______.", [
+        "maintaining frequent business contacts",
+        "having deep family connections",
+        "communicating regularly online",
+        "staying emotionally close"
+      ], "D", "Dịch: Cụm từ \"keeping strong ties\" (duy trì mối gắn kết bền chặt) ở đoạn 2 gần nghĩa nhất với cụm nào?", "Phân tích nghĩa của 'keeping strong ties':", "Động từ <i>keep</i> (duy trì/giữ) + <i>strong ties</i> (mối liên kết tình cảm gắn bó giữa các thành viên ở xa nhau) tương đương sát nhất với <span class='highlight-green-tag'>staying emotionally close</span> (giữ sự gần gũi về mặt tình cảm) hoặc <span class='highlight-green-tag'>having deep family connections</span> (có mối liên kết gia đình sâu sắc).", ["business contacts: liên hệ công việc kinh doanh (sai ngữ cảnh)", "having deep family connections: có sự kết nối gia đình sâu sắc (rất sát nghĩa)", "chỉ nói việc giao tiếp online chứ chưa nêu được chữ 'strong ties' (gắn kết bền chặt)", "staying emotionally close: duy trì sự gắn bó thân thiết về mặt tình cảm (tương đương trực tiếp với keeping strong ties Across distances)"], "", "tech_family"),
+      makeQ(33, "Đọc hiểu - Từ quy chiếu (Reference Phrase)", "Question 33: What do the words \"<u>these two sides</u>\" in paragraph 1 refer to?", [
+        "family talks and shared experiences.",
+        "privacy worries and online dangers.",
+        "good opportunities and big challenges.",
+        "household jobs and childcare arrangements."
+      ], "C", "Dịch: Cụm từ \"these two sides\" (hai mặt này) ở đoạn 1 quy chiếu cho điều gì?", "Đối chiếu câu đứng liền trước:", "Câu liền trước viết: <i>'This widespread use brings both <b>many good chances and some big problems</b> for making family relationships strong. Understanding <b>these two sides</b> is very important...'</i> → <i>many good chances and some big problems</i> đồng nghĩa hoàn toàn với <span class='highlight-green-tag'>good opportunities and big challenges</span>.", ["nằm ở câu thứ 2", "nằm ở đoạn 3", "good opportunities and big challenges (= many good chances and some big problems)", "không được đề cập"], "", "tech_family"),
+      makeQ(34, "Đọc hiểu - Chi tiết KHÔNG được đề cập (NOT Mentioned)", "Question 34: According to paragraph 3, which of the following is NOT mentioned as a problem from using too much technology in families?", [
+        "Family members might talk less in person at home.",
+        "People in the family might feel more alone with their devices.",
+        "It can cause less physical activity and health issues for children.",
+        "Family meals and quiet times might be stopped by phone messages."
+      ], "C", "Dịch: Theo đoạn 3, điều nào sau đây KHÔNG được đề cập như một vấn đề do sử dụng quá nhiều công nghệ trong gia đình?", "Đối chiếu từng câu trong Đoạn 3:", "Đoạn 3 nhắc đến:<br>• Ít trò chuyện trực tiếp (<i>less face-to-face talk at home</i> → A đúng)<br>• Cô đơn với thiết bị riêng và cảm thấy xa cách (<i>alone with their own devices / feel separated</i> → B đúng)<br>• Tin nhắn liên tục làm gián đoạn bữa ăn và giây phút yên tĩnh (<i>constant messages can stop family meals and quiet moments</i> → D đúng).<br>Đoạn 3 **không hề nhắc tới** việc ít vận động thể chất và vấn đề sức khỏe thể chất của trẻ: <span class='highlight-green-tag'>C. It can cause less physical activity and health issues for children</span>.", ["có trong câu 2 đoạn 3", "có trong câu 2 & 3 đoạn 3", "KHÔNG được đề cập trong đoạn 3", "có trong câu cuối đoạn 3"], "", "tech_family"),
+      makeQ(35, "Đọc hiểu - Tóm tắt ý chính đoạn 3 (Paragraph Summary)", "Question 35: Which of the following best summarizes the main point of paragraph 3?", [
+        "Technology helps families connect more and improves their daily lives greatly.",
+        "Families should avoid all modern technology to protect their relationships.",
+        "Using too much technology can cause problems like less real talk and safety worries for families.",
+        "The only people who face difficulties from technology in families are young children."
+      ], "C", "Dịch: Câu nào sau đây tóm tắt đúng nhất ý chính của đoạn 3?", "Tóm tắt toàn diện Đoạn 3:", "Đoạn 3 mở đầu bằng <i>'However, using a lot of technology also brings clear problems'</i> rồi chỉ ra 2 nhóm vấn đề chính: làm giảm giao tiếp trực tiếp tại nhà (<i>less face-to-face talk</i>) và các mối lo ngại về an toàn mạng như quyền riêng tư, bắt nạt mạng, nội dung xấu (<i>worries about privacy, cyberbullying, and bad content</i>). Đáp án bao quát trọn vẹn nhất là <span class='highlight-green-tag'>C</span>.", ["đây là ý của đoạn 2", "bài không khuyên cấm đoán toàn bộ công nghệ", "tóm tắt đầy đủ và chính xác nhất nội dung đoạn 3", "sai vì có từ cực đoan 'The only people'"], "", "tech_family"),
+      makeQ(36, "Đọc hiểu - Từ trái nghĩa (OPPOSITE in meaning)", "Question 36: The word \"<u>separated</u>\" in paragraph 3 is OPPOSITE in meaning to ______.", [
+        "connected",
+        "worried",
+        "online",
+        "distracted"
+      ], "A", "Dịch: Từ \"separated\" (bị chia cắt / xa cách nhau) ở đoạn 3 TRÁI NGHĨA với từ nào?", "Cặp từ trái nghĩa 'separated >< connected':", "Trong câu: <i>'This can weaken real connection and make people feel <b>separated</b>'</i> (cảm thấy xa cách, tách biệt nhau), từ trái nghĩa trực tiếp là <span class='highlight-green-tag'>connected</span> (gắn kết, kết nối với nhau).", ["connected: gắn kết, kết nối (trái nghĩa với separated: tách biệt/xa cách)", "worried: lo lắng", "online: trực tuyến", "distracted: xao nhãng"], "", "tech_family"),
+      makeQ(37, "Đọc hiểu - Nhận định ĐÚNG (TRUE Statement)", "Question 37: Which of the following statements is TRUE according to the passage?", [
+        "Families do not need to set rules for using phones or computers at home.",
+        "Children should not be allowed to use technology unless supervised.",
+        "Parents should show good examples of how to use technology safely.",
+        "Families living far apart cannot stay connected using modern technology."
+      ], "C", "Dịch: Nhận định nào sau đây là ĐÚNG theo bài đọc?", "Dẫn chứng từ Đoạn 4:", "Đoạn 4 viết: <i>'<b>Parents have an important role in showing good ways to use technology and talking openly about being safe online.</b>'</i> → Hoàn toàn trùng khớp với nhận định <span class='highlight-green-tag'>C. Parents should show good examples of how to use technology safely</span>.", ["sai vì đoạn 4 nói 'important to set clear rules'", "bài không nói cấm trẻ dùng nếu không có giám sát kè kè", "ĐÚNG theo câu 2 đoạn 4", "sai vì đoạn 2 nói người ở xa dễ dàng kết nối qua video calls"], "", "tech_family"),
+      makeQ(38, "Đọc hiểu - Diễn giải câu (Paraphrasing)", "Question 38: Which of the following best paraphrases the sentence \"<u>Too much time on screens often leads to less face-to-face talk at home, with family members alone with their own devices.</u>\" in paragraph 3?", [
+        "Limited screen exposure improves family communication and togetherness at home.",
+        "Families avoid using screens to ensure they talk more in person and strengthen their bonds.",
+        "Technology allows families to spend quiet time together without talking.",
+        "Spending a lot of time on phones or computers often means families talk less in person and stay by themselves at home."
+      ], "D", "Dịch: Câu nào sau đây diễn giải đúng nhất câu gạch chân ở đoạn 3?", "Đối chiếu tương đương từng cụm từ:", "• <i>Too much time on screens</i> = <b>Spending a lot of time on phones or computers</b><br>• <i>often leads to less face-to-face talk at home</i> = <b>often means families talk less in person</b><br>• <i>with family members alone with their own devices</i> = <b>and stay by themselves at home</b>.<br>Đáp án chính xác tuyệt đối là <span class='highlight-green-tag'>D</span>.", ["đổi thành Limited screen exposure (ngược giả thiết câu gốc)", "sai thông tin", "sai sắc thái nghĩa tiêu cực của câu gốc", "diễn giải chính xác 100% toàn bộ nội dung câu gốc"], "", "tech_family"),
+      makeQ(39, "Đọc hiểu - Câu suy luận (Inference Question)", "Question 39: Which of the following can be inferred from the passage about how families should use technology?", [
+        "Families should let technology guide their daily routines without any limits.",
+        "Setting screen rules is the only thing needed to ensure family success.",
+        "Families need to be smart about how they use technology to get the good parts and avoid the bad parts.",
+        "The benefits of technology are so big that its negative effects can simply be ignored by families."
+      ], "C", "Dịch: Điều nào sau đây có thể được suy ra từ bài đọc về cách các gia đình nên sử dụng công nghệ?", "Suy luận từ thông điệp kết bài:", "Câu cuối bài đúc kết: <i>'while technology offers powerful tools, its real effect on family well-being depends a lot on careful use and always putting real-life interactions first'</i> (cần sử dụng cẩn trọng, thông minh để phát huy mặt tốt và tránh mặt xấu). Do đó đáp án suy luận chuẩn xác là <span class='highlight-green-tag'>C</span>.", ["sai vì without any limits trái với việc lập quy tắc", "sai vì có từ cực đoan 'the only thing'", "suy luận chuẩn xác: cần sử dụng thông minh để tận dụng lợi ích và tránh tác hại", "sai vì không thể phớt lờ tác hại của công nghệ"], "", "tech_family"),
+      makeQ(40, "Đọc hiểu - Tóm tắt ý chính toàn bài (Whole Passage Main Idea)", "Question 40: Which of the following best summarizes the main idea of the entire passage?", [
+        "Technology is mostly bad for families because it creates many new problems and worries.",
+        "Families can only be strong if they avoid using any kind of modern technology in their homes.",
+        "Technology has both good and bad impacts on families, so it needs to be used wisely and thoughtfully.",
+        "The best way for families to use technology is to make sure everyone has their own device for entertainment."
+      ], "C", "Dịch: Câu nào sau đây tóm tắt đúng nhất ý chính của toàn bộ bài đọc?", "Tổng hợp bố cục 4 đoạn văn:", "• Đoạn 1: Công nghệ mang lại cả cơ hội tốt lẫn vấn đề lớn cho gia đình.<br>• Đoạn 2: Mặt tích cực (On the good side).<br>• Đoạn 3: Mặt tiêu cực (However, clear problems).<br>• Đoạn 4: Giải pháp sử dụng khôn ngoan, có quy tắc và đặt tương tác đời thực lên hàng đầu.<br>Câu tóm tắt bao quát trọn vẹn cả bài là: <span class='highlight-green-tag'>C. Technology has both good and bad impacts on families, so it needs to be used wisely and thoughtfully.</span>", ["phiến diện (chỉ nói mặt xấu)", "cực đoan (khuyên tránh dùng hoàn toàn)", "bao quát trọn vẹn 2 mặt tốt - xấu và thông điệp sử dụng khôn ngoan", "sai hoàn toàn với cảnh báo ở đoạn 3"], "", "tech_family")
+    ];
+
+    const userAnswers = {};
+
+    function togglePassageView(qId) {
+      const el = document.getElementById('collapse_pass_' + qId);
+      const btn = document.getElementById('btn_toggle_' + qId);
+      if (el) {
+        if (el.style.display === 'block') {
+          el.style.display = 'none';
+          if (btn) btn.innerHTML = '📖 Xem lại đoạn văn bài đọc';
+        } else {
+          el.style.display = 'block';
+          if (btn) btn.innerHTML = '▲ Thu gọn đoạn văn bài đọc';
+        }
+      }
+    }
+
+    function renderQuiz() {
+      const container = document.getElementById('quizContainer');
+      container.innerHTML = '';
+
+      quizData.forEach((q) => {
+        if (q.is_first_in_passage && passagesData[q.is_first_in_passage]) {
+          const pass = passagesData[q.is_first_in_passage];
+          const passCard = document.createElement('div');
+          passCard.className = 'reading-passage-card';
+          passCard.id = 'passage_anchor_' + q.is_first_in_passage;
+          passCard.innerHTML = `
+            <div class="passage-header-top">
+              <div class="passage-title-badge">
+                <span>📖</span>
+                <span>${pass.title}</span>
+              </div>
+              <span class="passage-scope-badge">${pass.badge}</span>
+            </div>
+            <div class="passage-intro-text">
+              📌 ${pass.intro}
+            </div>
+            ${pass.content}
+            <div class="passage-prompt-banner">
+              <span>👉</span>
+              <span>Đọc kỹ đoạn văn phía trên và lần lượt chọn đáp án cho các câu hỏi theo thứ tự bên dưới:</span>
+            </div>
+          `;
+          container.appendChild(passCard);
+        }
+
+        const card = document.createElement('div');
+        card.className = 'quiz-card';
+        card.id = `qCard_${q.id}`;
+
+        let quickPassageHtml = '';
+        if (q.passage_key && passagesData[q.passage_key]) {
+          quickPassageHtml = `
+            <div>
+              <button class="btn-toggle-passage" id="btn_toggle_${q.id}" onclick="togglePassageView(${q.id})">
+                📖 Xem lại đoạn văn bài đọc
+              </button>
+              <div class="collapse-passage-box" id="collapse_pass_${q.id}">
+                <div style="font-weight:900; color:#D35400; margin-bottom:8px;">📖 ${passagesData[q.passage_key].title}:</div>
+                ${passagesData[q.passage_key].content}
+              </div>
+            </div>
+          `;
+        }
+
+        let optionsHtml = '';
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <button class="option-btn" id="opt_${q.id}_${opt.key}" onclick="handleSelect(${q.id}, '${opt.key}')">
+              <span class="opt-key">${opt.key}</span>
+              <span class="opt-text">${opt.text}</span>
+            </button>
+          `;
+        });
+
+        let cardsHtml = '';
+        q.analysis.forEach(item => {
+          const isCorrect = item.badgeType === 'correct';
+          cardsHtml += `
+            <div class="exp-card-item">
+              <div class="exp-card-header">
+                <span class="card-word ${isCorrect ? 'word-correct' : 'word-wrong'}">${item.word}</span>
+                <span class="badge-pill ${isCorrect ? 'badge-pill-correct' : 'badge-pill-wrong'}">${item.badge}</span>
+              </div>
+              <div class="card-meaning">${item.note}</div>
+            </div>
+          `;
+        });
+
+        let whyWrongHtml = '';
+        q.whyWrong.forEach(item => {
+          whyWrongHtml += `
+            <div style="margin-bottom: 6px;">
+              <span class="wrong-key-pill">${item.word}</span> – ${item.reason}
+            </div>
+          `;
+        });
+
+        card.innerHTML = `
+          <div class="card-top">
+            <span class="q-number-pill">Câu ${q.id} / 40</span>
+            <span class="q-tag-pill">${q.type}</span>
+          </div>
+          <div class="q-text">
+            ${q.question}
+            ${q.subtext ? `<div style="margin-top: 8px; color: #333; background: #F8F9FA; padding: 10px 14px; border-radius: 12px; border-left: 4px solid #0984E3;">${q.subtext}</div>` : ''}
+          </div>
+          ${quickPassageHtml}
+          <div class="options-grid ${q.options.length === 4 ? 'grid-2col' : ''}">
+            ${optionsHtml}
+          </div>
+
+          <div class="explanation-container" id="exp_${q.id}">
+            <div class="exp-title-row">
+              <span>⚡ GIẢI THÍCH CHI TIẾT</span>
+            </div>
+            <div class="exp-trans-box">
+              <span style="font-size: 1.2rem;">💬</span>
+              <div>${q.trans}</div>
+            </div>
+            <div class="exp-section-title">
+              <span>1. Phân tích 4 đáp án:</span>
+            </div>
+            <div class="exp-grid-cards">
+              ${cardsHtml}
+            </div>
+            <div class="exp-block">
+              <div style="font-weight: 900; color: #00BA66; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                <span>2. ✅ TẠI SAO ĐÚNG?</span>
+                <span class="rule-tag">${q.whyCorrect.rule}</span>
+              </div>
+              <div style="color: #2D3436; padding-left: 22px;">
+                ${q.whyCorrect.content}
+              </div>
+            </div>
+            <div class="exp-block" style="margin-bottom: 0;">
+              <div style="font-weight: 900; color: #FF4757; margin-bottom: 4px;">
+                <span>3. ❌ TẠI SAO SAI?</span>
+              </div>
+              <div style="color: #4A4A4A; padding-left: 22px;">
+                ${whyWrongHtml}
+              </div>
+            </div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function handleSelect(questionId, selectedKey) {
+      const q = quizData.find(item => item.id === questionId);
+      if (!q) return;
+
+      userAnswers[questionId] = selectedKey;
+      const isCorrect = selectedKey === q.correct;
+
+      q.options.forEach(opt => {
+        const btn = document.getElementById(`opt_${q.id}_${opt.key}`);
+        if (!btn) return;
+        btn.classList.remove('selected-correct', 'selected-wrong', 'show-truth');
+
+        if (opt.key === selectedKey) {
+          btn.classList.add(isCorrect ? 'selected-correct' : 'selected-wrong');
+        } else if (opt.key === q.correct) {
+          btn.classList.add('show-truth');
+        }
+      });
+
+      if (isCorrect) {
+        playDing();
+        triggerConfetti(45);
+      } else {
+        playWrongSound();
+      }
+
+      const expBox = document.getElementById(`exp_${q.id}`);
+      if (expBox) expBox.style.display = 'block';
+
+      updateTopStats();
+    }
+
+    function updateTopStats() {
+      let correct = 0;
+      let totalAnswered = 0;
+
+      quizData.forEach(q => {
+        if (userAnswers[q.id] !== undefined) {
+          totalAnswered++;
+          if (userAnswers[q.id] === q.correct) correct++;
+        }
+      });
+
+      document.getElementById('correctScore').textContent = correct;
+      document.getElementById('answeredCount').textContent = totalAnswered;
+
+      const pct = (totalAnswered / quizData.length) * 100;
+      document.getElementById('progressBar').style.width = `${pct}%`;
+    }
+
+    function calculateAndShowResult() {
+      let correct = 0;
+      const total = quizData.length;
+
+      quizData.forEach(q => {
+        if (userAnswers[q.id] === q.correct) correct++;
+      });
+
+      const percentage = Math.round((correct / total) * 100);
+      document.getElementById('modalPercent').textContent = `${percentage}%`;
+      document.getElementById('modalFraction').textContent = `Đúng ${correct} / ${total} câu`;
+
+      const teacherQuoteEl = document.getElementById('modalTeacherQuote');
+      const trophyEl = document.getElementById('modalTrophy');
+
+      if (percentage < 50) {
+        trophyEl.textContent = '🌱';
+        teacherQuoteEl.textContent = '“Điểm lần này chưa cao lắm, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!”';
+      } else if (percentage >= 50 && percentage < 90) {
+        trophyEl.textContent = '🌟';
+        teacherQuoteEl.textContent = '“Con đã có tiến bộ khá ổn rồi, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!”';
+      } else {
+        trophyEl.textContent = '🏆';
+        teacherQuoteEl.textContent = '“Làm tốt lắm, con cố gắng ring điểm 10 ở lần sau nha!”';
+        triggerConfetti(120);
+      }
+
+      document.getElementById('scoreModal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('scoreModal').classList.remove('active');
+    }
+
+    function restartQuiz() {
+      for (const k in userAnswers) delete userAnswers[k];
+      closeModal();
+      renderQuiz();
+      updateTopStats();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function initAppNow() {
+      initBackgroundElements();
+      renderQuiz();
+      updateTopStats();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAppNow);
+    } else {
+      initAppNow();
+    }
+  </script>
+</body>
+</html>
